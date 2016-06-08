@@ -5,12 +5,15 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "?.git"
+    "url": "https://github.com/aimensasi/Workflows.git"
   },
   "author": "Aimen Sasi",
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-util": "^3.0.7"
+  },
+  "devDependencies": {
+    "gulp-coffee": "^2.3.2"
   }
 }
