@@ -16,6 +16,7 @@
   "devDependencies": {
     "gulp-browserify": "^0.5.1",
     "gulp-coffee": "^2.3.2",
+    "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.0",
     "jquery": "^2.2.4",
     "mustache": "^2.2.1"
