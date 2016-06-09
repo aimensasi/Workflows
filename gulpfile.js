@@ -38,7 +38,7 @@ gulp.task('compass', function(){
         .pipe(compass({
             sass: 'components/sass',
             image: 'builds/development/images',
-            style: 'compressed'
+            style: 'nested'
         
         }))
         .on('error', gUtil.log)
