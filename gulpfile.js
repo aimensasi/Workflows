@@ -15,6 +15,9 @@ var jsSources = [
 var sassSources = [
   'components/sass/style.scss' 
 ];
+var allSassSources = [
+  'components/sass/*.scss' 
+];
 
 gulp.task('coffee', function(){
     gulp.src(coffeeSources)
@@ -35,9 +38,17 @@ gulp.task('compass', function(){
         .pipe(compass({
             sass: 'components/sass',
             image: 'builds/development/images',
-            style: 'expanded'
+            style: 'compressed'
         
         }))
         .on('error', gUtil.log)
         .pipe(gulp.dest('builds/development/css'))
 });
+
+gulp.task('watch', function(){
+    gulp.watch(coffeeSources, ['coffee']);
+    gulp.watch(jsSources, ['js']);
+    gulp.watch(allSassSources, ['compass']);
+});
+
+gulp.task('default', ['coffee', 'js', 'compass', 'watch']);
